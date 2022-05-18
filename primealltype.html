@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Prime Number</title>
+    <style>
+        .lable {
+            background-color: rgb(7, 185, 60);
+        }
+    </style>
+    <script>
+        // no return no argument1
+        function marg() {
+            var number = document.getElementById("num").value;
+            if (number == "") {
+
+                document.getElementById('num1').value = "Please Enter Valid Input";
+
+
+            }
+            else if (!number.match(/^[0-9]*$/)) {
+
+                document.getElementById('num1').value = "String and special symbol can't be allowed";
+
+            }
+            else if (document.getElementById("1").checked == true) {
+
+                function primeno() {
+                    var number = document.getElementById("num").value;
+                    let v = true;
+                    var i;
+                    if (number == 1) {
+                        document.getElementById('num1').value = "1 is not prime number and not composite number";
+                    }
+                    else if (number > 1) {
+                        for (i = 2; i < number; i++) {
+
+                            if (number % i == 0) {
+                                v = false;
+                                break;
+                            }
+                        }
+                        if (v) {
+                            document.getElementById('num1').value = "Number is  prime";
+                        }
+                        else {
+                            document.getElementById('num1').value = "Number is  not prime";
+                        }
+
+
+                    }
+                    else {
+                        document.getElementById('num1').value = "Please Enter Valid Input";
+                    }
+
+                }
+                primeno();
+            }
+
+            //no return with argument2
+            else if (document.getElementById("2").checked == true) {
+                var number = document.getElementById("num").value;
+                function primeno(number) {
+
+                    let v = true;
+                    var i;
+                    if (number == 1) {
+                        document.getElementById('num1').value = "1 is not prime number and not composite number";
+                    }
+                    else if (number > 1) {
+                        for (i = 2; i < number; i++) {
+
+                            if (number % i == 0) {
+                                v = false;
+                                break;
+                            }
+                        }
+                        if (v) {
+                            document.getElementById('num1').value = "Number is  prime";
+                        }
+                        else {
+                            document.getElementById('num1').value = "Number is  not prime";
+                        }
+
+
+                    }
+                    else {
+                        document.getElementById('num1').value = "Please Enter Valid Input";
+                    }
+
+                }
+                primeno(number);
+            }
+            //with return with argument3
+            else if (document.getElementById("3").checked == true) {
+                var number = document.getElementById("num").value;
+                function primeno(number) {
+
+                    let v = true;
+                    var i;
+                    if (number == 1) {
+                        var m1 = document.getElementById('num1').value = "1 is not prime number and not composite number";
+                        return m1;
+                    }
+                    else if (number > 1) {
+                        for (i = 2; i < number; i++) {
+
+                            if (number % i == 0) {
+                                v = false;
+                                break;
+                            }
+                        }
+                        if (v) {
+                            var m2 = document.getElementById('num1').value = "Number is  prime";
+                            return m2;
+                        }
+                        else {
+                            var m3 = document.getElementById('num1').value = "Number is  not prime";
+                            return m3;
+                        }
+
+
+                    }
+                    else {
+                        m4 = document.getElementById('num1').value = "Please Enter Valid Input";
+                        return m4;
+                    }
+
+                }
+                primeno(number);
+            }
+            // else {
+            //     document.getElementById('num1').innerHTML = "Please Enter Number";
+            // }
+            //with return no argument4    
+            else if (document.getElementById("4").checked == true) {
+
+                function primeno() {
+                    var number = document.getElementById("num").value;
+                    let v = true;
+                    var i;
+                    if (number == 1) {
+                        let m1 = document.getElementById('num1').value = "1 is not prime number and not composite number";
+                        return m;
+                    }
+                    else if (number > 1) {
+                        for (i = 2; i < number; i++) {
+
+                            if (number % i == 0) {
+                                v = false;
+                                break;
+                            }
+                        }
+                        if (v) {
+                            let m2 = document.getElementById('num1').value = "Number is  prime";
+                            return m1;
+                        }
+                        else {
+                            let m3 = document.getElementById('num1').value = "Number is  not prime";
+                            return m3;
+                        }
+
+
+                    }
+                    else {
+                        m4 = document.getElementById('num1').value = "Please Enter Valid Input";
+                        return m4;
+                    }
+
+                }
+                primeno();
+            }
+            //function expression5
+            else if (document.getElementById("5").checked == true) {
+
+                let All = function () {
+                    var number = document.getElementById("num").value;
+                    let v = true;
+                    var i;
+                    if (number == 1) {
+                        document.getElementById('num1').value = "1 is not prime number and not composite number";
+                    }
+                    else if (number > 1) {
+                        for (i = 2; i < number; i++) {
+
+                            if (number % i == 0) {
+                                v = false;
+                                break;
+                            }
+                        }
+                        if (v) {
+                            document.getElementById('num1').value = "Number is  prime";
+                        }
+                        else {
+                            document.getElementById('num1').value = "Number is  not prime";
+                        }
+
+
+                    }
+                    else {
+                        document.getElementById('num1').value = "Please Enter Valid Input";
+                    }
+
+                }
+                All();
+            }
+
+            //Using callback function6
+            else if (document.getElementById("6").checked == true) {
+                function primeno() {
+                    var number = document.getElementById("num").value;
+                    let v = true;
+                    var i;
+                    if (number == 1) {
+                        return 2;
+                    }
+                    else if (number > 1) {
+                        for (i = 2; i < number; i++) {
+                            if (number % i == 0) {
+                                v = false;
+                                break;
+                            }
+
+                        }
+                        return v;
+
+
+                    }
+                    else {
+                        return 3;
+                    }
+
+                }
+                function primeno1() {
+
+                    if (primeno() == 2) {
+                        document.getElementById('num1').value = "1  is not prime number and not composite number";
+
+                    }
+                    else if (primeno() == 3) {
+                        document.getElementById('num1').value = "Please Enter Number";
+
+                    }
+                    else if (primeno()) {
+                        document.getElementById('num1').value = "Number is  prime";
+                    }
+
+                    else {
+                        document.getElementById('num1').value = "Number is  not prime";
+                    }
+                }
+                primeno1();
+            }
+
+            //Using Arrow function7
+            else if (document.getElementById("7").checked == true) {
+
+                let All = () => {
+                    var number = document.getElementById("num").value;
+                    let v = true;
+                    var i;
+                    if (number == 1) {
+                        document.getElementById('num1').value = "1 is not prime number and not composite number";
+                    }
+                    else if (number > 1) {
+                        for (i = 2; i < number; i++) {
+
+                            if (number % i == 0) {
+                                v = false;
+                                break;
+                            }
+                        }
+                        if (v) {
+                            document.getElementById('num1').value = "Number is  prime";
+                        }
+                        else {
+                            document.getElementById('num1').value = "Number is  not prime";
+                        }
+
+
+                    }
+                    else {
+                        document.getElementById('num1').value = "Please Enter Valid Input";
+                    }
+
+                }
+                All();
+            }
+            //Using Promise function8
+            else if (document.getElementById("8").checked == true) {
+                function primeno() {
+                    let promise = new Promise(function (resolve, reject) {
+                        let number = document.getElementById('num').value;
+
+                        let v = true;
+                        if (number == 1) {
+                            document.getElementById('num1').value = "1 is not prime number and not composite number";
+                        }
+                        else if (number > 1) {
+                            for (let i = 2; i < number; i++) {
+                                if (number % i == 0) {
+                                    v = false;
+                                    break;
+                                }
+                            }
+                            if (v) {
+                                resolve();
+                            } else {
+                                reject();
+                            }
+                        }
+                        else {
+
+                            document.getElementById('num1').value = "Please Enter Valid Input";
+
+
+                        }
+                    });
+
+
+                    promise
+                        .then(() => {
+                            document.getElementById('num1').value = "Number is  prime";
+                        })
+                        .catch(() => {
+                            document.getElementById('num1').value = "Number is  not prime";
+                        })
+                }
+
+                primeno();
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body style="background-color:darkgray;">
+    <center>
+        <h3 style="color: brown;">Prime Number</h3>
+        <table border="1px" height=5% width=32% rules=all>
+            <!-- row-1 -->
+            <tr class="lable">
+                <td>
+                    <lable>Enter Number:</lable>
+                </td>
+                <td>
+                    <input type="text" id="num" style="padding-left:1px; width: 188px;" />
+                </td>
+            </tr>
+            <!-- row-2 -->
+            <tr>
+                <td>
+                    <lable>NO Return No Argument:</lable>
+                </td>
+                <td>
+                    <input type="radio" name="r1" id="1" />
+                </td>
+            </tr>
+            <!-- row-3 -->
+            <tr class="lable">
+                <td>
+                    <lable>NO Return with Argument:</lable>
+                </td>
+                <td>
+                    <input type="radio" name="r1" id="2" />
+                </td>
+            </tr>
+            <!-- row-4 -->
+            <tr>
+                <td>
+                    <lable>With Return With Argument:</lable>
+                </td>
+                <td><input type="radio" name="r1" id="3" /></td>
+            </tr>
+            <!-- row-5 -->
+            <tr class="lable">
+                <td>
+                    <lable>With Return No Argument:</lable>
+                </td>
+                <td>
+                    <input type="radio" name="r1" id="4" />
+                </td>
+            </tr>
+            <!-- row-6 -->
+            <tr>
+                <td>
+                    <lable>Function Expression:</lable>
+                </td>
+                <td>
+                    <input type="radio" name="r1" id="5" />
+                </td>
+            </tr class="lable">
+            <!-- row-7 -->
+            <tr class="lable">
+                <td>
+                    <lable>Using callback:</lable>
+                </td>
+                <td>
+                    <input type="radio" name="r1" id="6" />
+                </td>
+            </tr>
+            <!-- row-8 -->
+            <tr>
+                <td>
+                    <lable>Using Arrow Function:</lable>
+                </td>
+                <td>
+                    <input type="radio" name="r1" id="7" />
+                </td>
+            </tr>
+            <!-- row-9 -->
+            <tr class="lable">
+                <td>
+                    <label>Using Promise Function:</label>
+                </td>
+                <td>
+                    <input type="radio" name="r1" id="8" />
+                </td>
+            </tr>
+            <!-- row-10 -->
+            <tr>
+                <td>
+                    <center><input type="button" value="Check" onClick=" marg()" /></center>
+                </td>
+                <td>
+                    <input type="text" id="num1" style="width: 187px;" />
+                </td>
+            </tr>
+
+        </table>
+        <!-- <span id="digit-err" style="color: rgb(241, 54, 54);"></span> -->
+    </center>
+</body>
+
+</html>
